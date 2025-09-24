@@ -7,19 +7,17 @@ const LocationForm = ({
   response,
   placeName
 }) => {
-  console.log(5)
   return (
     <div>
       <h1 style={{color: "green"}}>Equidistance Scout</h1>
 
-      {/* Form for user input */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="text">Location one: </label>
         <input
           type="text"
-          value={locationOne} // Controlled input tied to state
-          onChange={(e) => setLocationOne(e.target.value)} // Update state on change
-          placeholder="Enter a location" // Placeholder text
+          value={locationOne}
+          onChange={(e) => setLocationOne(e.target.value)}
+          placeholder="Enter a location"
         />
         <br />
         <label htmlFor="text">Location two: </label>
@@ -33,9 +31,8 @@ const LocationForm = ({
         <button type="submit">Submit</button>
       </form>
 
-      {/* Show the response once received */}
       {response && <p>{response}</p>}
-      {placeName && <p>{placeName}</p>}
+      {placeName && <p>The midway location between {locationOne} & {locationTwo} is:<br/>{placeName}</p>}
     </div>
   );
 };

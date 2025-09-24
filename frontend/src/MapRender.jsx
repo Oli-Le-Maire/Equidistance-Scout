@@ -2,7 +2,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"
 
 function MapView({ lat, lon, placeName }) {
-    console.log(18)
     if (!lat || !lon) return <p>No coordinates yet</p>
 
     return (
